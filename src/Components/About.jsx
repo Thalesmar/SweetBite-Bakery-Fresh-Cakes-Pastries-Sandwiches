@@ -4,7 +4,7 @@ const about = () => {
   return (
     <section className='Product-Categories'>
         <div className='left-Product-Categories'>
-            <img src={chocolate_cake} alt="Product Categories img" />
+            <img src={chocolate_cake} alt="Product Categories img" loading="lazy" />
         </div>
         <div className='right-Product-Categories'>
             <h2>About Sara.co</h2>

@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
 
       <div className='right-hero-content'>
-        <img src={images[currentIndex]} alt="cake slider" loading='lazy'/>
+        <img src={images[currentIndex]} alt="cake slider" loading="lazy" />
         <div className='dot-container'>
             {images.map((image, slideIndex) => (
                 <div key={slideIndex} className='dot-style' onClick={() => goToSlide(slideIndex)}>◉</div>
