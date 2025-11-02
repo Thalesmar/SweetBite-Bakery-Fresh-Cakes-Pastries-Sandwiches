@@ -52,7 +52,7 @@ body.dark .logo span{
 }
 
 li a {
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 600;
   transition: color var(--transition-speed);
 }
@@ -62,10 +62,11 @@ li a:hover {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
   transition: color var(--transition-speed);
+  cursor: pointer;
 }
 
 .material-symbols-outlined {
@@ -75,6 +76,7 @@ li a:hover {
     'wght' 400,
     'GRAD' 0,
     'opsz' 24;
+    font-size: 2.1rem;
 }
 
 /* ===========================
@@ -85,31 +87,47 @@ li a:hover {
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .left-hero-content {
-  max-width: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
-  padding: 20px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
 }
 
 .left-hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.left-hero-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 .right-hero-content {
   display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  flex: 1;
-    margin-bottom: 3rem;
+  position: relative;
+}
+
+.right-hero-content img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .hero-btns {
@@ -119,12 +137,14 @@ li a:hover {
   flex-wrap: wrap;
 }
 
+
 .cta-button {
-  padding: 10px 20px;
+  padding: 14px 32px;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   background: var(--primary-color);
   color: var(--btn-light);
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background var(--transition-speed), transform var(--transition-speed);
@@ -135,12 +155,12 @@ li a:hover {
 }
 
 .order-button {
-  padding: 10px 20px;
-  border: 1px solid var(--primary-color);
-  border-radius: 20px;
+  padding: 14px 32px;
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
   color: var(--primary-color);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   background: transparent;
   transition: all var(--transition-speed);
@@ -150,11 +170,59 @@ li a:hover {
   background: var(--bg);
 }
 
-.right-hero-content img {
-  max-width: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-speed);
+.leftArrowStyles {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    font-size: 50px;
+    color: var(--font);
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
+
+.leftArrowStyles:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.rightArrowStyles {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+    font-size: 50px;
+    color: var(--font);
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.rightArrowStyles:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.dot-container{
+   position: absolute;
+   bottom: -40px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   justify-content: center;
+   gap: 8px;
+}
+
+.dot-style{
+    cursor: pointer;
+    font-size: 25px;
+    color: var(--primary-color);
+    transition: transform 0.2s;
+}
+
+.dot-style:hover {
+    transform: scale(1.2);
+}
+
 
 /* ===========================
    About Section
@@ -164,7 +232,7 @@ li a:hover {
   flex-direction: column;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .about-text {
@@ -174,29 +242,29 @@ li a:hover {
 }
 
 .about-text h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .about-text p {
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 530px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .about-category {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 2 columns by default (small screens) */
-  gap: 2rem;
+  gap: 5rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 
 .about-category img {
-    width: 70px;
+  width: 90px;
   cursor: pointer;
   transition: transform var(--transition-speed);
   filter: brightness(0) saturate(100%) invert(52%) sepia(89%) saturate(1000%) hue-rotate(10deg) brightness(95%) contrast(101%);
@@ -204,8 +272,8 @@ li a:hover {
 
 .category-item {
   margin: 1.5rem 0;
-  padding: 0 30px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 15px;
   cursor: pointer;
   transition: all var(--transition-speed);
 }
@@ -213,6 +281,7 @@ li a:hover {
 .category-item p {
   text-align: center;
   font-weight: 700;
+  font-size: 1.4rem;
   padding-top: 20px;
   color: rgb(215, 140, 0);
 }
@@ -221,7 +290,88 @@ li a:hover {
 
 
 
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column-reverse;
+  }
+
+  .left-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .right-hero-content img {
+    max-width: 500px;
+  }
+}
+
 @media (max-width: 768px) {
+  .Product-Categories{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-hero-content {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .left-hero-content h1{
+    font-size: 2.2rem;
+  }
+
+  .left-hero-content p{
+    font-size: 0.95rem;
+  }
+
+  .cta-button, .order-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-category {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .category-item img{
+    width: 60px;
+  }
+
+  .category-item p {
+    font-size: 0.95rem;
+  }
+
+  .left-Product-Categories img{
+    max-width: 400px;
+  }
+
+  .right-hero-content {
+    margin-left: 0;
+  }
+
+  .right-hero-content img{
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 468px) {
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
@@ -232,84 +382,70 @@ li a:hover {
     text-align: center;
   }
 
+  .left-hero-content h1{
+    text-align: center;
+    font-size: 1.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-hero-content p{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
   .left-hero-content {
     max-width: 100%;
     padding: 1rem;
   }
-    .left-hero-content h1{
-    text-align: center;
-  }
-
-    .left-hero-content p{
-    text-align: center;
-  }
 
   .hero-btns {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button, .order-button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .about-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
   }
 
   .about-category {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .category-item img{
     width: 50px;
   }
 
+  .category-item {
+    padding: 15px;
+  }
+
+  .category-item p {
+    font-size: 0.9rem;
+    padding-top: 15px;
+  }
+
   .left-Product-Categories img{
-    max-width: 400px;
-  }
-
-  .right-hero-content img{
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 468px) {
- .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-    .Product-Categories{
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .left-hero-content h1{
-    text-align: center;
-  }
-
-    .left-hero-content p{
-    text-align: center;
-  }
-
-  .left-hero-content {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .hero-btns {
-    justify-content: center;
-  }
-
-  .about-category {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-    .left-Product-Categories img{
     max-width: 300px;
   }
-
 }
 
 .Product-Categories{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 5rem auto;
     gap: 4rem;
 }
 
@@ -318,18 +454,19 @@ li a:hover {
 }
 
 .right-Product-Categories{
-    max-width: 380px;
+    max-width: 450px;
     margin-top: 4rem;
 }
 .right-Product-Categories h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .right-Product-Categories p{
-    max-width: 420px;
-    font-size: 0.90rem;
+    max-width: 500px;
+    font-size: 1.1rem;
     margin-bottom: 20px;
+    line-height: 1.5rem;
 }
 
 .category-button{
