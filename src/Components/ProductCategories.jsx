@@ -34,7 +34,7 @@ const ProductCategories = () => {
             }`}
             onClick={() => setActiveCategory(index)}
           >
-            <img src={item.img} alt={item.name} />
+            <img src={item.img} alt={item.name} loading='lazy'/>
             <p>{item.name}</p>
           </div>
         ))}
