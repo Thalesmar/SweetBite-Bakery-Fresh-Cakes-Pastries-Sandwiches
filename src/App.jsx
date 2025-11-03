@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
-import Footer from './Components/Footer'
-import ProductCard from './Components/ProductCard'
+import Card from './Components/Card'
 import ProductCategories from './Components/ProductCategories'
 import About from './Components/About'
+import Contact from './Components/Contact'
+import Footer from './Components/Footer'
 import './App.css'
 
 const App = () => {
@@ -14,7 +15,8 @@ const App = () => {
       <Hero />
       <ProductCategories />
       <About />
-      <ProductCard />
+      <Card />
+      <Contact />
       <Footer />
     </div>
   )
