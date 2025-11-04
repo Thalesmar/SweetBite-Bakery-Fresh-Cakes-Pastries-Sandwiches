@@ -6,6 +6,11 @@ A modern, responsive landing page for SweetBite Bakery built with React and Vite
 ![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+
+
+Visit the live application: [https://thalesmar.github.io/SweetBite-Bakery-Fresh-Cakes-Pastries-Sandwiches/](https://thalesmar.github.io/SweetBite-Bakery-Fresh-Cakes-Pastries-Sandwiches/)
+
+
 ## ✨ Features
 
 - 🎨 **Modern UI Design** - Clean and professional bakery-themed interface
