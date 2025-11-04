@@ -133,6 +133,17 @@ body.dark .navbar.scrolled {
     transition: right 0.3s ease;
 }
 
+.side-bar li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
 body.dark .side-bar {
     background-color: rgba(30, 30, 30, 0.95);
 }
@@ -236,6 +247,8 @@ body.dark .hero-description {
   background: var(--primary-color);
   color: #fff;
   box-shadow: 0 4px 15px rgba(215, 140, 0, 0.3);
+  display: flex;
+  max-width: 150px;
 }
 
 .btn--primary:hover {
@@ -732,6 +745,14 @@ body.dark .footer-divider {
     grid-template-columns: 1fr;
     gap: 5rem;
     text-align: center;
+
+  }
+
+  .about-content .btn{
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 1.3rem;
   }
 
   .hero-content {
