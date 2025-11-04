@@ -114,6 +114,50 @@ body.dark .navbar.scrolled {
   color: #fff;
 }
 
+.side-bar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: var(--bg);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+}
+
+body.dark .side-bar {
+    background-color: rgba(30, 30, 30, 0.95);
+}
+
+.side-bar.active {
+    right: 0;
+}
+
+.side-bar.active {
+  display: flex; /* shown when active */
+  border-radius: 10px;
+}
+
+/* .side-bar li{
+    width: 100%;
+} */
+
+.side-bar a{
+    width: 100%;
+}
+
+.sidebar-closeBtn{
+    fill: var(--font);
+}
+
 
 /* ===========================
    Hero Section (BEM)
@@ -206,8 +250,43 @@ body.dark .hero-description {
 }
 
 .btn--secondary:hover {
-  background: var(--primary-color);
-  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(215, 140, 0, 0.4);
+}
+
+.hamburger-btn{
+    cursor: pointer;
+}
+
+.sidebar-openBtn{
+    fill: #fff;
+    background: var(--primary-color);
+    position: fixed;
+    right: 90px;
+    bottom: 10;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--font);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .sidebar-openBtn{
+    right: 100px;
+  }
+}
+
+@media(min-width: 800px){
+    .sidebar-openBtn{
+        display: none;
+  }
 }
 
 /* Hero Image */
@@ -651,7 +730,7 @@ body.dark .footer-divider {
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 5rem;
     text-align: center;
   }
 
@@ -679,6 +758,10 @@ body.dark .footer-divider {
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 1rem;
+  }
+
+    .sidebar-openBtn{
+    right: 80px;
   }
 
   .nav-menu {
