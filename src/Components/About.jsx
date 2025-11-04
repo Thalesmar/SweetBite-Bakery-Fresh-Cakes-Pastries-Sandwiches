@@ -1,19 +1,40 @@
-import React from 'react'
-import chocolate_cake from '../assets/chocolate-cake.png'
-const about = () => {
-  return (
-    <section className='Product-Categories' id='about'>
-        <div className='left-Product-Categories'>
-            <img src={chocolate_cake} alt="Product Categories img" loading="lazy" />
-        </div>
-        <div className='right-Product-Categories'>
-            <h2>About SweetBite Bakery</h2>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that.</p>
-            <p>It has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here.</p>
-            <button className="category-button">Read More</button>
-        </div>
-    </section>
-  )
-}
+import React from 'react';
+import chocolate_cake from '../assets/about-img.jpg'
 
-export default about
+const About = () => {
+  return (
+    <section className="about-section" id="about">
+      <div className="about-container">
+        <div className="about-image">
+          <img
+            src={chocolate_cake}
+            alt="Fresh baked goods display at SweetBite Bakery"
+            loading="lazy"
+            width="500"
+            height="400"
+            className="about-img"
+          />
+        </div>
+
+        <div className="about-content">
+          <h2 className="section-title">About SweetBite Bakery</h2>
+          <p className="about-text">
+            At SweetBite Bakery, we believe every occasion deserves something special.
+            For over a decade, we've been crafting artisanal baked goods that blend
+            traditional recipes with contemporary flavors.
+          </p>
+          <p className="about-text">
+            Our master bakers start early each morning, using only the finest locally-sourced
+            ingredients to ensure every bite delivers exceptional quality and taste. From
+            celebration cakes to daily bread, we bake with love and dedication.
+          </p>
+          <a href="#contact" className="btn btn--primary">
+            Read More
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
